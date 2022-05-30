@@ -5,12 +5,9 @@ func deleteApp() {
     let icon = springboard.icons["Википедия"]
     if icon.exists {
         icon.press(forDuration: 1.3)
-        sleep(1)
-        springboard.buttons["Удалить приложение"].tap()
-        sleep(1)
-        springboard.alerts.buttons["Удалить приложение"].tap()
-        sleep(1)
-        springboard.alerts.buttons["Удалить"].tap()
+        waitForElementAndTap(element:  springboard.buttons["Удалить приложение"])
+        waitForElementAndTap(element: springboard.alerts.buttons["Удалить приложение"])
+        waitForElementAndTap(element: springboard.alerts.buttons["Удалить"])
         XCUIDevice.shared.press(.home)
     }
 }
@@ -35,4 +32,14 @@ func checkIsSafariOpened() {
     let isSafariOpened = safari.wait(for: .runningForeground, timeout: 30)
     assert(isSafariOpened)
     safari.terminate()
+}
+
+func assertElementExists(element: XCUIElement) {
+    element.wait()
+    assert(element.exists)
+}
+
+func waitForElementAndTap(element: XCUIElement) {
+    assertElementExists(element: element)
+    element.tap()
 }

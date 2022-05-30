@@ -21,10 +21,10 @@ class WikiTests: XCTestCase {
         let onboardingScreen = OnboardingScreen(app: app)
         let mainScreen = MainScreen(app: app)
         let mostReadScreen = MostReadScreen(app: app)
+        
         onboardingScreen.skipButton.tap()
         mainScreen.mostReadArticlesButton.tap()
-        mostReadScreen.mostReadPageHeader.wait()
-        assert(mostReadScreen.mostReadPageHeader.exists)
+        assertElementExists(element: mostReadScreen.mostReadPageHeader)
     }
     
     func testAboutScreen() {
@@ -32,23 +32,22 @@ class WikiTests: XCTestCase {
         let mainScreen = MainScreen(app: app)
         let settingsScreen = SettingsScreen(app: app)
         let aboutWikiScreen = AboutWikiScreen(app: app)
+        
         onboardingScreen.skipButton.tap()
-        mainScreen.settingsButton.wait()
-        mainScreen.settingsButton.tap()
+        waitForElementAndTap(element: mainScreen.settingsButton)
         settingsScreen.aboutWikipediaButton.tap()
-        aboutWikiScreen.authorsSection.wait()
-        assert(aboutWikiScreen.authorsSection.exists)
-        assert(aboutWikiScreen.translatorsSection.exists)
-        assert(aboutWikiScreen.licenseSection.exists)
+        assertElementExists(element: aboutWikiScreen.authorsSection)
+        assertElementExists(element: aboutWikiScreen.translatorsSection)
+        assertElementExists(element: aboutWikiScreen.licenseSection)
     }
     
     func testBrowserRedirect() {
         let onboardingScreen = OnboardingScreen(app: app)
         let mainScreen = MainScreen(app: app)
         let settingsScreen = SettingsScreen(app: app)
+        
         onboardingScreen.skipButton.tap()
-        mainScreen.settingsButton.wait()
-        mainScreen.settingsButton.tap()
+        waitForElementAndTap(element: mainScreen.settingsButton)
         settingsScreen.supportWikipediaButton.tap()
         checkIsSafariOpened()
     }
