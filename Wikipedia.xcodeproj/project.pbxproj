@@ -331,6 +331,13 @@
 		0EF8634E1C19E02700006D2D /* WMFEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF8634D1C19E02700006D2D /* WMFEmptyView.xib */; };
 		0EF863511C19E4F100006D2D /* WMFEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF863501C19E4F100006D2D /* WMFEmptyView.m */; };
 		19A175F095F5197BA20EA8BA /* NSUserActivity+WMFExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A172FA6AE61E76FCEF4259 /* NSUserActivity+WMFExtensionsTest.m */; };
+		2057C48B2840F4D9005014C1 /* TestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C48A2840F4D9005014C1 /* TestCases.swift */; };
+		2057C48D2840F511005014C1 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C48C2840F511005014C1 /* MainScreen.swift */; };
+		20BD4CC52844D4EF008B7168 /* MostReadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD4CC42844D4EF008B7168 /* MostReadScreen.swift */; };
+		20BD4CC72844D63E008B7168 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD4CC62844D63E008B7168 /* SettingsScreen.swift */; };
+		20BD4CC92844D78A008B7168 /* AboutWikiScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD4CC82844D78A008B7168 /* AboutWikiScreen.swift */; };
+		20BD4CCB2844E46E008B7168 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD4CCA2844E46E008B7168 /* OnboardingScreen.swift */; };
+		20BD4CCE2844EBFE008B7168 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD4CCD2844EBFE008B7168 /* Utils.swift */; };
 		41CCB67421CC1F9700206B47 /* SavedArticlesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCB67321CC1F9700206B47 /* SavedArticlesCollectionViewController.swift */; };
 		41CCB67521CC1F9700206B47 /* SavedArticlesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCB67321CC1F9700206B47 /* SavedArticlesCollectionViewController.swift */; };
 		41CCB67621CC1F9700206B47 /* SavedArticlesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCB67321CC1F9700206B47 /* SavedArticlesCollectionViewController.swift */; };
@@ -3918,6 +3925,14 @@
 		0EF8634F1C19E4F100006D2D /* WMFEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMFEmptyView.h; path = Wikipedia/Code/WMFEmptyView.h; sourceTree = SOURCE_ROOT; };
 		0EF863501C19E4F100006D2D /* WMFEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMFEmptyView.m; path = Wikipedia/Code/WMFEmptyView.m; sourceTree = SOURCE_ROOT; };
 		19A172FA6AE61E76FCEF4259 /* NSUserActivity+WMFExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserActivity+WMFExtensionsTest.m"; sourceTree = "<group>"; };
+		2057C48A2840F4D9005014C1 /* TestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCases.swift; sourceTree = "<group>"; };
+		2057C48C2840F511005014C1 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		20BD4CC42844D4EF008B7168 /* MostReadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostReadScreen.swift; sourceTree = "<group>"; };
+		20BD4CC62844D63E008B7168 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		20BD4CC82844D78A008B7168 /* AboutWikiScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWikiScreen.swift; sourceTree = "<group>"; };
+		20BD4CCA2844E46E008B7168 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		20BD4CCD2844EBFE008B7168 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		20BD4CCF28450121008B7168 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		41CCB67321CC1F9700206B47 /* SavedArticlesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArticlesCollectionViewController.swift; sourceTree = "<group>"; };
 		41FCAA3521C844CB001D8411 /* ReadingListEntryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListEntryCollectionViewController.swift; sourceTree = "<group>"; };
 		533AB8AD259792A9003A43D9 /* wikipedia-language-variants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wikipedia-language-variants.json"; sourceTree = "<group>"; };
@@ -6860,6 +6875,45 @@
 			name = Style;
 			sourceTree = "<group>";
 		};
+		2057C4872840F474005014C1 /* WikiTests */ = {
+			isa = PBXGroup;
+			children = (
+				20BD4CCC2844EBF3008B7168 /* Utils */,
+				2057C4892840F4A0005014C1 /* Screens */,
+				2057C4882840F48F005014C1 /* Tests */,
+				20BD4CCF28450121008B7168 /* README.md */,
+			);
+			path = WikiTests;
+			sourceTree = "<group>";
+		};
+		2057C4882840F48F005014C1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2057C48A2840F4D9005014C1 /* TestCases.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		2057C4892840F4A0005014C1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2057C48C2840F511005014C1 /* MainScreen.swift */,
+				20BD4CC42844D4EF008B7168 /* MostReadScreen.swift */,
+				20BD4CC62844D63E008B7168 /* SettingsScreen.swift */,
+				20BD4CC82844D78A008B7168 /* AboutWikiScreen.swift */,
+				20BD4CCA2844E46E008B7168 /* OnboardingScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		20BD4CCC2844EBF3008B7168 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				20BD4CCD2844EBFE008B7168 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		229C20D91CB08FA500BC17AD /* PageHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -8656,6 +8710,7 @@
 		D499142C181D51DE00E6073C = {
 			isa = PBXGroup;
 			children = (
+				2057C4872840F474005014C1 /* WikiTests */,
 				D499143E181D51DE00E6073C /* Wikipedia */,
 				D801C8501EB8E131001FA294 /* Localizations */,
 				BC8309941A7BF935003FC5C7 /* Tests */,
@@ -10877,9 +10932,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BD4CC52844D4EF008B7168 /* MostReadScreen.swift in Sources */,
+				20BD4CC72844D63E008B7168 /* SettingsScreen.swift in Sources */,
 				B0606EB120AA6FF0006EC6B9 /* SnapshotRecorderTests.swift in Sources */,
+				2057C48B2840F4D9005014C1 /* TestCases.swift in Sources */,
+				2057C48D2840F511005014C1 /* MainScreen.swift in Sources */,
+				20BD4CCE2844EBFE008B7168 /* Utils.swift in Sources */,
+				20BD4CCB2844E46E008B7168 /* OnboardingScreen.swift in Sources */,
 				B0606EC520AA955C006EC6B9 /* SnapshotHelper.swift in Sources */,
 				B0BDA58220B09A090098DB65 /* XCUIApplication+SnapshotUtilities.swift in Sources */,
+				20BD4CC92844D78A008B7168 /* AboutWikiScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
