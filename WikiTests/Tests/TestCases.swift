@@ -8,8 +8,6 @@ class WikiTests: XCTestCase {
     
     override func setUp() {
         app.launch()
-        app.wait()
-        
     }
     
     override func tearDown() {
@@ -22,8 +20,10 @@ class WikiTests: XCTestCase {
         let mainScreen = MainScreen(app: app)
         let mostReadScreen = MostReadScreen(app: app)
         
-        onboardingScreen.skipButton.tap()
-        mainScreen.mostReadArticlesButton.tap()
+        onboardingScreen
+            .skipButton.tap()
+        mainScreen
+            .mostReadArticlesButton.tap()
         assertElementExists(element: mostReadScreen.mostReadPageHeader)
     }
     
@@ -33,9 +33,11 @@ class WikiTests: XCTestCase {
         let settingsScreen = SettingsScreen(app: app)
         let aboutWikiScreen = AboutWikiScreen(app: app)
         
-        onboardingScreen.skipButton.tap()
+        onboardingScreen
+            .skipButton.tap()
         waitForElementAndTap(element: mainScreen.settingsButton)
-        settingsScreen.aboutWikipediaButton.tap()
+        settingsScreen
+            .aboutWikipediaButton.tap()
         assertElementExists(element: aboutWikiScreen.authorsSection)
         assertElementExists(element: aboutWikiScreen.translatorsSection)
         assertElementExists(element: aboutWikiScreen.licenseSection)
@@ -46,9 +48,12 @@ class WikiTests: XCTestCase {
         let mainScreen = MainScreen(app: app)
         let settingsScreen = SettingsScreen(app: app)
         
-        onboardingScreen.skipButton.tap()
+        onboardingScreen
+            .skipButton.tap()
         waitForElementAndTap(element: mainScreen.settingsButton)
-        settingsScreen.supportWikipediaButton.tap()
+        settingsScreen
+            .supportWikipediaButton.tap()
         checkIsSafariOpened()
+        closeSafari()
     }
 }

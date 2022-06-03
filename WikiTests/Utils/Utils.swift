@@ -1,5 +1,7 @@
 import XCTest
 
+let safari = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
+
 func deleteApp() {
     let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
     let icon = springboard.icons["Википедия"]
@@ -28,9 +30,11 @@ extension XCUIElement {
 }
 
 func checkIsSafariOpened() {
-    let safari = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
-    let isSafariOpened = safari.wait(for: .runningForeground, timeout: 30)
+    let isSafariOpened = safari.wait(for: XCUIApplication.State.runningForeground, timeout: 30)
     assert(isSafariOpened)
+}
+
+func closeSafari() {
     safari.terminate()
 }
 
